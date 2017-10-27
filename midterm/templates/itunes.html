@@ -1,0 +1,12 @@
+{% block content %}
+  <h1>Learn more about your favorite movie! :)</h1>
+  <form method="POST" action="http://localhost:5000/season">
+      {{ form.hidden_tag() }}
+      {% for message in get_flashed_messages() %}
+      {{ message }}
+      {% endfor %}
+      <p>{{ form.itunes.label }}{{ form.itunes() }}</p>
+      {{ form.submit() }}
+  </form>
+  <img src="/static/moviepicture.jpg" height="75"/>
+{% endblock %}

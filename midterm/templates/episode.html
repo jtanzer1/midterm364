@@ -1,0 +1,11 @@
+{% block content %}
+  <h1></h1>
+  <form method="POST" action="http://localhost:5000/episode">
+      {{ form.hidden_tag() }}
+      {% for message in get_flashed_messages() %}
+      {{ message }}
+      {% endfor %}
+      <p>{{ form.episode.label }}{{ form.episode() }}</p>
+      {{ form.submit() }}
+  </form>
+{% endblock %}

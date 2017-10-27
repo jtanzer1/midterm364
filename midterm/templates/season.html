@@ -1,0 +1,13 @@
+{% block content %}
+
+	{%for x in apiresult['results']%}
+		<a href="/movie/{{x['trackName']}}"><p>{{x['trackName']}}</p></a>
+
+		{% if x['trackName'] == "Shrek" %}
+		<h3>^ That's my favorite movie too!</h3>
+		{% endif %}
+
+
+	{% endfor%}
+
+{% endblock %}
